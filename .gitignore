@@ -31,8 +31,7 @@ Thumbs.db
 *.pid
 docker-data/
 
-# DB dumps (keep an example dump in db/ if you want, but ignore personal dumps)
-*.sql
+# DB dumps
 *.sqlite
 *.db
 
