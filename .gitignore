@@ -1,0 +1,43 @@
+# Node / React
+node_modules/
+npm-debug.log*
+yarn.lock
+pnpm-lock.yaml
+dist/
+build/
+.cache/
+.vite/
+
+# Python / FastAPI
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+.venv/
+venv/
+.env
+.env.*
+
+# VS Code / IDE
+.vscode/
+.idea/
+*.iml
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Docker
+*.pid
+docker-data/
+
+# DB dumps (keep an example dump in db/ if you want, but ignore personal dumps)
+*.sql
+*.sqlite
+*.db
+
+# Logs & coverage
+*.log
+coverage/
+htmlcov/
+.pytest_cache/

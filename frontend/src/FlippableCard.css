@@ -1,0 +1,397 @@
+/* INSIGHTS WRAPPER AND CARD LAYOUT */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.insights-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding-top: 70px;
+  padding-bottom: 30px;
+}
+
+.insights-container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: center;
+  gap: 16px;
+}  
+  
+@media (max-width: 1450px) and (min-width: 1175px) {
+  .insights-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 1175px) {
+  .insights-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 875px) {
+  .insights-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .insights-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* FLIPPABLE CARDS */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.flippable-card {
+  width: 270px;
+  height: 270px;
+  perspective: 1000px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+  position: absolute;
+}
+  
+.flippable-card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  top: 0;
+  left: 0;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.card-front h3,
+.card-back h3 {
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* CARD LISTS */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.scrollable-list {
+  max-height: 195.5px;
+  overflow-y: auto;
+  width: 220px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #fff;
+}
+  
+.list-item {
+  font-size: 14px;
+  padding: 4px;
+  border-bottom: 1px solid #e0e0e0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  white-space: nowrap;
+  overflow: hidden;
+}
+  
+.list-item .list-id {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: left;
+}
+  
+.list-item .score {
+  flex-shrink: 0;
+  margin-left: 8px;
+  color: #444;
+  font-weight: 600;
+}
+  
+.list-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0px;
+}
+  
+.list-item:first-child {
+  padding-top: 0px;
+}
+  
+.empty-message {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  padding: 5px;
+}
+  
+.single-score {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 5px;
+  text-align: center;
+}
+  
+.scrollable-list::-webkit-scrollbar {
+  width: 8px;
+}
+  
+.scrollable-list::-webkit-scrollbar-track {
+  border-radius: 4px;
+  background-color: #fff;
+}
+  
+.scrollable-list::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: #ccc;
+}
+  
+.scrollable-list::-webkit-scrollbar-thumb:hover {
+  background-color: #bbb;
+}
+
+/* GRAPHS AND CHARTS */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.graph-content {
+  font-size: 14px;
+  color: #333;
+  font-weight: bold;
+}
+
+.chart-container {
+  padding-top: 10px !important;
+  height: 180px;
+  width: 240px;
+  border: 0px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chart-container .recharts-tooltip {
+  font-size: 12px;
+}
+
+.chart-container .recharts-cartesian-axis-tick text {
+  font-size: 12px;
+}
+
+.chart-container .recharts-cartesian-axis-tick line {
+  stroke: gray;
+}
+
+.chart-container .recharts-y-axis {
+  width: 30px !important;
+}
+
+.gaugechart-container {
+  height: 160px;
+  width: 240px;
+  border: 0px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.recharts-layer.recharts-pie-labels {
+  display: none;
+}
+
+.recharts-tooltip-wrapper {
+  background: rgba(0, 0, 0, 0);
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+.room-underuse-sector .recharts-sector {
+  stroke: white;
+  stroke-width: 3.5px;
+}
+
+.teachers-sector .recharts-sector {
+  stroke: white;
+  stroke-width: 3.5px;
+}
+
+.recharts-cartesian-axis-tick text {
+  font-size: 12px;
+  fill: #555;
+}
+.recharts-tooltip-wrapper {
+  font-size: 12px;
+}
+
+.indexpie-sector .recharts-sector {
+  stroke: white;
+  stroke-width: 0px;
+}
+
+.recharts-polar-angle-axis {
+  display: none;
+}
+
+.recharts-radial-bar-background {
+  fill: #e0e0e0 !important;
+}
+
+.gauge-value {
+  display: none;
+}
+
+.indexgaugechart-container {
+  height: 160px;
+  width: 240px;
+  border: 0px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.radialgaugechart {
+  padding-top: 20px;
+}
+
+.radialgaugechart,
+.teachers-sector:active,
+.teachers-sector:hover,
+.gauge-sector:active,
+.gauge-sector:hover,
+.gauge-sector,
+.room-underuse-sector:active,
+.room-underuse-sector:hover,
+.room-underuse-sector,
+.teachers-sector {
+  outline: 0px !important;
+  stroke: 0px !important;
+  transition: none !important;  
+}
+
+.teachers-sector:focus,
+.room-underuse-sector:focus,
+.gauge-sector:focus,
+.radialgaugechart:focus {
+  outline: 0px !important;
+  stroke: 0px !important;
+  transition: none !important;  
+}
+
+.barchart-container {
+  padding-top: 17.5px !important;
+  height: 180px;
+  width: 240px;
+  border: 0px solid blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* PEAK HOUR CONGESTION MATRIX */
+/* ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| */
+.matrix-container {
+  height: 160px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10px;
+  padding-left: 3.5px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.matrix-grid-container {
+  height: 160px !important;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.matrix-header-row {
+  display: flex;
+  margin-bottom: 2.5px;
+}
+
+.empty-header {
+  width: 30px;
+}
+
+.column-header {
+  display: flex;
+  gap: 4px;
+  font-size: 10px;
+}
+
+.column-header-cell {
+  width: 30px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.matrix-content {
+  display: flex;
+}
+
+.row-header-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-right: 0px;
+  margin-left: 0px;
+  padding-top: 0px !important;
+  gap: 3.15px;
+}
+
+.matrix-columns {
+  display: flex;
+  gap: 4px;
+  padding-top: 4px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25px;
+}
+
+.cell {
+  width: 30px;
+  height: 5.6px;
+  border-radius: 1.5px;
+  text-align: center;
+  font-size: 10px;
+}
+
+.column .cell:nth-child(4),
+.column .cell:nth-child(8),
+.column .cell:nth-child(12),
+.column .cell:nth-child(16) {
+  margin-bottom: 3.75px;
+}

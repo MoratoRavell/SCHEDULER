@@ -1,0 +1,13 @@
+.header {
+  cursor: default !important;
+  color: #333 !important;
+  transition: color 0.2s ease-in-out;
+}
+
+.clickable-header {
+  cursor: pointer !important;
+}
+
+.clickable-header:hover {
+  color: #555 !important;
+}

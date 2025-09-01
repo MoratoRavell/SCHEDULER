@@ -1,0 +1,233 @@
+/* Reused from your other modals */
+.modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+  text-align: center !important;
+}
+
+/* Modal container */
+.signup-modal {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 320px;
+  max-width: 90%;
+  height: 525px;
+  max-height: 75%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+.login-modal {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 16px;
+  width: 320px;
+  max-width: 90%;
+  height: 225px;
+  max-height: 50%;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  border: 1px solid #ccc;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  overflow-y: auto;
+}
+
+/* Modal title */
+.signup-modal h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Modal input fields */
+.signup-modal input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional message or text */
+.signup-modal p {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Modal title */
+.login-modal h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #333;
+  text-align: center;
+}
+
+/* Modal input fields */
+.login-modal input {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Optional message or text */
+.login-modal p {
+  font-size: 0.95rem;
+  color: #444;
+  text-align: center;
+  margin-top: -0.75rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Button container */
+.modal-actions {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 0.5rem;
+}
+
+/* Shared button style */
+.modal-actions button {
+  padding: 8px 16px;
+  font-weight: bold;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease, border-color 0.2s ease;
+  transform-origin: center;
+  will-change: transform;
+  position: relative;
+  z-index: 1;
+  box-sizing: border-box;
+}
+
+/* Cancel button */
+.modal-actions button:first-child {
+  background-color: #444;
+  color: white;
+  border-color: #444;
+}
+.modal-actions button:first-child:hover {
+  background-color: white;
+  color: #444;
+  transform: scale(0.95);
+}
+
+/* Accept / Logout button */
+.modal-actions button:last-child {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+.modal-actions button:last-child:hover {
+  background-color: white;
+  color: #007bff;
+  transform: scale(0.95);
+}
+
+.logout-button {
+  background-color: #dc3545 !important;
+  color: white;
+  border: 1px solid #dc3545 !important;
+}
+
+.logout-button:hover {
+  background-color: white !important;
+  color: #dc3545 !important;
+  transform: scale(0.95);
+}
+
+.modal-actions button:disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #666;
+  cursor: not-allowed;
+  transform: none;
+  opacity: 0.7;
+}
+
+.modal-actions button:disabled:hover {
+  background-color: #ccc;
+  color: #666;
+  border-color: #ccc;
+  transform: none;
+}
+
+/* Message styles under inputs */
+.default-message {
+  color: #FFFFFF !important;
+  font-size: 0.9rem;
+  text-align: left !important;
+  min-height: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-message {
+  color: red !important;
+  font-size: 0.9rem;
+  text-align: left !important;
+  min-height: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+.valid-message {
+  color: green !important;
+  font-size: 0.9rem;
+  text-align: left !important;
+  min-height: 1rem;
+  margin-top: -0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* WebKit browsers */
+::-webkit-scrollbar {
+  width: 14px;
+  background: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 10px;
+  margin: 12px 0;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0,0,0,0.3);
+  border-radius: 10px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+/* Sytels for the SCHEDULER button in the Solution Screen */
+.return-home-button {
+  background-color: #28a745 !important; /* greenish */
+  color: white;
+  border: 1px solid #28a745 !important;
+}
+
+.return-home-button:hover {
+  background-color: white !important;
+  color: #28a745 !important;
+  transform: scale(0.95);
+}

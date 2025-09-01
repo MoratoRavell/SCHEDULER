@@ -1,0 +1,144 @@
+.drop-container {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.drop-area {
+  border: 2px dashed #ccc;
+  border-radius: 0.75rem;
+  padding: 1rem;
+  text-align: center;
+  background-color: #f8f8f8;
+  transition: background-color 0.3s ease;
+}
+
+.drop-area.drag-over {
+  background-color: #e0f0ff;
+  border-color: #3399ff;
+}
+
+.drop-area.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.file-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.file-status {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #555;
+}
+
+/* Checklist */
+.file-checklist {
+  text-align: left;
+}
+
+.file-checklist h4 {
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.file-checklist ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.file-checklist li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 6px 0;
+  padding: 6px 10px;
+  background-color: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  font-weight: 500;
+  color: #333;
+  transition: background-color 0.2s ease;
+}
+
+.check-ok {
+  color: green;
+}
+
+.check-missing {
+  color: red;
+}
+
+/* Choose Files button */
+.choose-button {
+  background-color: #ffffff;
+  color: black;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+  margin-top: 0.5rem;
+}
+
+.choose-button:hover:not(:disabled) {
+  color: #007bff;
+}
+
+.choose-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Clear All button */
+.clear-btn {
+  margin: 1rem auto 0 auto;
+  display: block;
+  width: 10rem;
+  background-color: #ffffff;
+  color: #444;
+  font-size: 14px;
+  padding: 10px 20px;
+  border: 0px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.clear-btn:hover:not(:disabled) {
+  background-color: white;
+  color: #f44336;
+}
+
+.clear-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* ✕ remove button next to checklist items */
+.x-delete-button {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  transition: color 0.2s, transform 0.1s ease;
+}
+
+.x-delete-button:hover {
+  color: #d11a2a;
+  transform: scale(0.96);
+}
+

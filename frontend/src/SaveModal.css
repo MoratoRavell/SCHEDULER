@@ -1,0 +1,101 @@
+/* SaveModal.css */
+
+.container {
+  padding: 1rem;
+}
+
+.open-button {
+  padding: 0.5rem 1rem;
+  background-color: #2563eb; /* blue-600 */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10010; /* higher than toast */
+}
+
+.modal {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 400px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.modal-input {
+  width: 95.7%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cancel-button {
+  padding: 0.5rem 1rem;
+  background-color: #e5e7eb;
+  color: black;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+}
+
+.cancel-button:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid #e5e7eb;
+  transform: scale(0.95);
+}
+
+.save-button {
+  padding: 0.5rem 1rem;
+  background-color: #16a34a;
+  color: white;
+  border: 1px solid #16a34a;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s, border-color 0.2s, transform 0.1s;
+  box-sizing: border-box;
+}
+
+/* Hover only when not disabled */
+.save-button:not(:disabled):hover {
+  background-color: white;
+  color: #16a34a;
+  border: 1px solid #16a34a;
+  transform: scale(0.95);
+}
+
+.error-text {
+  color: #dc2626; /* red-600 */
+  font-size: 0.875rem;
+  margin-bottom: 0.5rem;
+}
+
+.save-button:disabled {
+  background-color: #a0aec0;
+  border: 1px solid #a0aec0;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
