@@ -60,13 +60,13 @@ _Current sample database needs revising_
 ## SREENSHOTS
 _Screenshots/GIFs of the app's UI here (TO DO)_  
 - Load data/Load precomputed solution:
-![Load Data](screenshots/load_data.png)
+![Load Data](screenshots/load_data.jpg)
 - Compute solution (run model):
-![Run Model](screenshots/run_model.png)
+![Run Model](screenshots/run_model.jpg)
 - Solution assignments:
-![Calendar Assignments](screenshots/solution_assignments.png)
+![Calendar Assignments](screenshots/solution_assignments.jpg)
 - Solution insights:
-![Insights Cards](screenshots/solution_insights.png)
+![Insights Cards](screenshots/solution_insights.jpg)
 
 
 
