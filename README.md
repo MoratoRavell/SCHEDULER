@@ -31,6 +31,7 @@ docs/       - Screenshots, diagrams, and additional documentation
 
 
 ## HOW TO RUN LOCALLY
+_None of this has yet been tested_
 
 ### 1. Clone the repository
 ```bash
